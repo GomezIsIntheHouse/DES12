@@ -1,0 +1,12 @@
+[
+  {
+    "name": "carrito-2",
+    "product": [],
+    "uuid": "1e2d44c1-46a1-4f6b-be01-e0ce5bed3740"
+  },
+  {
+    "name": "carrito-3",
+    "uuid": "465a4bf7-fee3-4e71-9b5f-6735c67b4115",
+    "admin": true
+  }
+]

@@ -8,5 +8,11 @@
     "name": "Cortadora de cesped",
     "price": "123332",
     "uuid": "69eaadf4-c2c6-45e0-af7f-d62b8e55e60e"
+  },
+  {
+    "name": "Abisisate",
+    "price": "112",
+    "thumbnails": "www.image.com",
+    "uuid": "665cb020-4f3e-4927-9017-6712f77a9911"
   }
 ]

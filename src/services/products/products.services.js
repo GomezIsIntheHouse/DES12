@@ -86,8 +86,11 @@ class ProductService{
     async deleteProduct(uuid){
         try{
             const products = await fs.promises.readFile(__dirname + '/products.json');
+            
             const productsObject = JSON.parse(products);
+
             const newProducts = productsObject.filter(i => i.uuid != uuid);
+
             await fs.promises.writeFile(__dirname + '/products.json', JSON.stringify(newProducts, null, 2)); 
             return {
                 success: true,
