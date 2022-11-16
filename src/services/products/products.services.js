@@ -1,13 +1,18 @@
 const fs = require('fs');
+var moment = require('moment'); 
+moment().format();
+
 class ProductService{
     constructor(){}
 
     async createProduct(data){
         try{
-            console.log(data)
+            // console.log(data)
+            const dataTo = data;
+            dataTo.timestamp = moment()
             const products = await fs.promises.readFile(__dirname + '/products.json');
             const productsObject = JSON.parse(products);
-            productsObject.push(data);
+            productsObject.push(dataTo);
             await fs.promises.writeFile(__dirname + '/products.json', JSON.stringify(productsObject, null, 2));  
             return {
                 success: true,

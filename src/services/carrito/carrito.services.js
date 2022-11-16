@@ -1,4 +1,6 @@
 const fs = require('fs');
+var moment = require('moment'); 
+moment().format();
 
 
 class CarritoService{
@@ -8,7 +10,8 @@ class CarritoService{
         try {
             console.log(data)
             let dataTo = data;
-            dataTo.admin = true;
+            dataTo.admin = true; // admin : "true" || admin:"false" indica el acceso a permisos del sistema
+            dataTo.timestamp = moment()
             const carrito = await fs.promises.readFile(__dirname + '/carrito.json');
             const carritoObject = JSON.parse(carrito);
             carritoObject.push(dataTo);
@@ -29,6 +32,7 @@ class CarritoService{
         }
     
     }
+
     async getCarritos(){
         try {
             const carrito = await fs.promises.readFile(__dirname + '/carrito.json');
@@ -93,15 +97,33 @@ class CarritoService{
         }
 
     }
+    async deleteCarrito(uuid){
+        try{
+            const carrito = await fs.promises.readFile(__dirname + '/carrito.json');
+            
+            const carritoObject = JSON.parse(carrito);
+
+            const newCarrito = carritoObject.filter(i => i.uuid != uuid); //filter devuelve un array modificado por una condicion
+
+            await fs.promises.writeFile(__dirname + '/carrito.json', JSON.stringify(newCarrito, null, 2)); 
+            return {
+                success: true,
+                data: `Carrito ${uuid} deleted successfully`
+            } 
+        }catch(err){
+            console.error(err);
+            return {
+                success: false,
+                message: err.message
+            }
+        }
+    }
     
 
 
     async addProductsToCart(uuid, data){
         try {
-           
-
             const carritos = await this.getCarritos();
-
             const newList = await carritos.data.map(i => {
                 if(i.uuid == uuid){
                     let productUpdate = [];
@@ -114,9 +136,9 @@ class CarritoService{
                     }
 
                     return {
-                        name:i.name,
+                        name: i.name,
+                        uuid: i.uuid,
                         product: productUpdate,
-                        uuid:i.uuid
                     }
                 }
                 return i;
@@ -153,17 +175,18 @@ class CarritoService{
                     const newProductLIst = i.product.filter(i => i.uuid != id_product);
                        return {
                         name: i.name,
-                        product: newProductLIst,
                         uuid: i.uuid,
+                        product: newProductLIst,
                     }
                 }
                 return i;
             });
               
             await fs.promises.writeFile(__dirname + '/carrito.json', JSON.stringify(newList, null, 2)); 
+
             return {
                 success: true,
-                data: `Producto added to cart ${uuid} successfully`
+                data: `Producto delete to cart ${uuid} successfully`
             }
         }catch(err){
             console.error(err);

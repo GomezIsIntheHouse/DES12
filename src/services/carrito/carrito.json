@@ -8,5 +8,11 @@
     "name": "carrito-3",
     "uuid": "465a4bf7-fee3-4e71-9b5f-6735c67b4115",
     "admin": true
+  },
+  {
+    "name": "carrito-7",
+    "uuid": "55804b37-f42c-45c4-8e64-5f0c74577950",
+    "admin": true,
+    "timestamp": "2022-11-15T22:00:00.390Z"
   }
 ]
