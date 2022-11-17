@@ -69,6 +69,9 @@ class ProductService{
                     return {
                         name: data.name,
                         price: data.price,
+                        thumbnails : data.thumbnails,
+                        timestamp: moment(),
+                        stock: data.stock,
                         uuid
                     }
                 }

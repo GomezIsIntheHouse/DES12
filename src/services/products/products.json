@@ -1,18 +1,26 @@
 [
   {
     "name": "Plancha",
-    "price": "56333",
+    "price": "3500",
+    "thumbnails": "www.plancha.com",
+    "timestamp": "2022-11-17T13:31:43.384Z",
+    "stock": "2",
     "uuid": "81b52ee9-1fe7-4fd6-bede-86c90c72086a"
   },
   {
     "name": "Cortadora de cesped",
     "price": "123332",
+    "thumbnails": "ww.222.com",
+    "timestamp": "2022-11-17T13:41:34.642Z",
+    "stock": "3",
     "uuid": "69eaadf4-c2c6-45e0-af7f-d62b8e55e60e"
   },
   {
     "name": "Abisisate",
     "price": "112",
     "thumbnails": "www.image.com",
+    "timestamp": "2022-11-17T13:41:26.078Z",
+    "stock": "2",
     "uuid": "665cb020-4f3e-4927-9017-6712f77a9911"
   },
   {
@@ -23,10 +31,27 @@
     "timestamp": 1668549007308
   },
   {
-    "name": "dsd",
-    "price": "112",
-    "thumbnails": "www.image.com",
-    "uuid": "b8b81b4f-6634-49eb-bb5c-95e03cb14f93",
-    "timestamp": "2022-11-15T21:59:32.075Z"
+    "name": "test1",
+    "price": "123",
+    "thumbnails": "www",
+    "timestamp": "2022-11-17T13:41:21.173Z",
+    "stock": "12",
+    "uuid": "cbc0c3ef-0e78-4c75-8ff6-40ea6cc6dcb7"
+  },
+  {
+    "name": "Titanio",
+    "price": "123",
+    "thumbnails": "ww.titanio.com",
+    "timestamp": "2022-11-17T13:32:26.802Z",
+    "stock": "112",
+    "uuid": "e6837338-a804-483f-b52e-4a8ab43506c7"
+  },
+  {
+    "uuid": "1a82b956-b48d-45e0-8104-117c2982a1d2",
+    "timestamp": "2022-11-17T14:09:19.835Z",
+    "thumbnails": "www.foto.com",
+    "name": "producto publico de prueba",
+    "price": "34",
+    "stock": "22"
   }
 ]

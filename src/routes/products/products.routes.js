@@ -37,7 +37,7 @@ router.get('/', async (_req, res, next) => {
 router.put('/:productUuid', async(req, res, next) => {
     try{
         const { productUuid } = req.params;
-        const {body} = req;
+        const { body } = req;
         
         if(_.isNil(productUuid) || _.isNil(body))(res.status(400).json(
             {success: false, message: "Req error"}

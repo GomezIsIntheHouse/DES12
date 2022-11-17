@@ -1,18 +1,37 @@
 [
   {
+    "name": "carrito-1",
+    "uuid": "ea19cc85-8710-4207-b24e-01fb165df0bd",
+    "product": [
+      {
+        "name": "Cortadora de cesped",
+        "price": "123332",
+        "uuid": "69eaadf4-c2c6-45e0-af7f-d62b8e55e60e"
+      }
+    ]
+  },
+  {
     "name": "carrito-2",
-    "product": [],
-    "uuid": "1e2d44c1-46a1-4f6b-be01-e0ce5bed3740"
+    "uuid": "07da296a-93cc-444a-8ac3-04869466b88a",
+    "admin": true,
+    "timestamp": "2022-11-16T13:19:23.781Z"
   },
   {
     "name": "carrito-3",
-    "uuid": "465a4bf7-fee3-4e71-9b5f-6735c67b4115",
-    "admin": true
+    "uuid": "a1a6b582-6bfa-46a7-9d6e-2d7065016f6d",
+    "admin": true,
+    "timestamp": "2022-11-16T13:19:26.641Z"
   },
   {
-    "name": "carrito-7",
-    "uuid": "55804b37-f42c-45c4-8e64-5f0c74577950",
+    "name": "carrito-4",
+    "uuid": "e39311f2-72d0-485c-b3b2-75af5a979185",
     "admin": true,
-    "timestamp": "2022-11-15T22:00:00.390Z"
+    "timestamp": "2022-11-16T13:19:30.297Z"
+  },
+  {
+    "name": "carrito-41",
+    "uuid": "a9145254-c3c0-4fd3-b491-021c5486937f",
+    "admin": true,
+    "timestamp": "2022-11-17T15:11:25.603Z"
   }
 ]

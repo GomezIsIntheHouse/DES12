@@ -125,6 +125,7 @@ class CarritoService{
         try {
             const carritos = await this.getCarritos();
             const newList = await carritos.data.map(i => {
+
                 if(i.uuid == uuid){
                     let productUpdate = [];
                    

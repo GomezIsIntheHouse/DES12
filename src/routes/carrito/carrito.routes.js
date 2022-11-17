@@ -101,6 +101,23 @@ router.delete('/:carritoUuid/product/:id_prod', async (req, res, next) => {
         if(!data.success)(res.status(500).json(data))
         res.status(200).json(data);
     }catch(err){
+        
+        next(err);
+    }
+})
+
+router.delete('/:carritoUuid', async (req, res, next)=>{
+    try {
+        const { carritoUuid } = req.params;
+        if(_.isNil(carritoUuid) )(res.status(400).json({success: false, message: "Req error"}));
+
+        const data = await carritoService.deleteCarrito(carritoUuid)
+
+        if(!data.success)(res.status(500).json(data))
+        res.status(200).json(data);
+
+    } catch (err) {
+
         next(err);
     }
 })
